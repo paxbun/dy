@@ -1,7 +1,11 @@
 # Copyright (c) 2020 Chanjung Kim (paxbun). All rights reserved.
 
 cmake_minimum_required(VERSION 3.17)
-project(dy)
+project(dy
+    VERSION 1.0.0
+    DESCRIPTION "JSON-like type library for C"
+    HOMEPAGE_URL "https://github.com/paxbun/dy"
+)
 enable_testing()
 
 # C++ Standard
@@ -27,6 +31,13 @@ target_include_directories(dy
     PUBLIC  ${DY_PUBLIC_DIR}
     PRIVATE ${DY_PRIVATE_DIR}
 )
+
+set(DY_HEADERS
+    ${DY_PUBLIC_DIR}/dy.h
+)
+
+install(TARGETS dy EXPORT dy DESTINATION "bin")
+install(FILES ${DY_HEADERS} DESTINATION "include")
 
 if (DY_TESTS)
     # Download and build googletest
