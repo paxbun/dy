@@ -49,18 +49,8 @@ struct _dy_val_t
         case dy_type_barr: data.barr.~vector(); break;
         case dy_type_iarr: data.iarr.~vector(); break;
         case dy_type_farr: data.farr.~vector(); break;
-        case dy_type_arr:
-        {
-            for (auto dy : data.arr) delete dy;
-            data.arr.~vector();
-            break;
-        }
-        case dy_type_map:
-        {
-            for (auto const& [str, dy] : data.map) delete dy;
-            data.map.~unordered_map();
-            break;
-        }
+        case dy_type_arr: data.arr.~vector(); break;
+        case dy_type_map: data.map.~unordered_map(); break;
         }
     }
 };

@@ -173,6 +173,21 @@ DY_PUBLIC(dy_t) dy_copy(dy_t val) DY_NOEXCEPT
 
 DY_PUBLIC(void) dy_dispose(dy_t val) DY_NOEXCEPT
 {
+    switch (val->type)
+    {
+    case dy_type_arr:
+        for (auto dy : DY_DATA(arr)) dy_dispose(dy);
+        break;
+    case dy_type_map:
+        for (auto const& [str, dy] : DY_DATA(map)) dy_dispose(dy);
+        break;
+    }
+
+    dy_dispose_self(val);
+}
+
+DY_PUBLIC(void) dy_dispose_self(dy_t val) DY_NOEXCEPT
+{
     delete val;
 }
 

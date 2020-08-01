@@ -146,6 +146,12 @@ DY_PUBLIC(dy_t) dy_copy(dy_t val) DY_NOEXCEPT;
 /// <param name="val">the instance</param>
 DY_PUBLIC(void) dy_dispose(dy_t val) DY_NOEXCEPT;
 
+/// <summary>
+/// deallocates the memory holding the instance but not the internal data.
+/// </summary>
+/// <param name="val">the instance</param>
+DY_PUBLIC(void) dy_dispose_self(dy_t val) DY_NOEXCEPT;
+
 // ---------------------------------- null ---------------------------------- //
 
 /// <summary>
