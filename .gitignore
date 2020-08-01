@@ -2,5 +2,4 @@
 .vs/
 build/
 out/
-CMakeSettings.json
 cpp.hint
