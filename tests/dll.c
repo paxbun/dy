@@ -2,7 +2,7 @@
 
 #include "dll.h"
 
-#include <cassert>
+#include <assert.h>
 
 DLL_PUBLIC(dy_t) get_sample_generic_array() DY_NOEXCEPT
 {
