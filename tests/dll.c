@@ -21,17 +21,22 @@ DLL_PUBLIC(dy_t) get_sample_generic_map() DY_NOEXCEPT
         3);
 }
 
-DLL_PUBLIC(dy_t) get_sample_generic_barr() DY_NOEXCEPT
+DLL_PUBLIC(dy_t) get_sample_barr() DY_NOEXCEPT
 {
     return dy_make_barr((bool[]) { true, false, true, true, false }, 5);
 }
 
-DLL_PUBLIC(dy_t) get_sample_generic_iarr() DY_NOEXCEPT
+DLL_PUBLIC(dy_t) get_sample_bytes() DY_NOEXCEPT
+{
+    return dy_make_bytes((uint8_t[]) { 2, 3, 4, 1 }, 4);
+}
+
+DLL_PUBLIC(dy_t) get_sample_iarr() DY_NOEXCEPT
 {
     return dy_make_iarr((int64_t[]) { 2, 3, 4, 1 }, 4);
 }
 
-DLL_PUBLIC(dy_t) get_sample_generic_farr() DY_NOEXCEPT
+DLL_PUBLIC(dy_t) get_sample_farr() DY_NOEXCEPT
 {
     return dy_make_farr((double[]) { 2.5, 3.6, 3.8, 1.2, 4.5, 5.8 }, 6);
 }

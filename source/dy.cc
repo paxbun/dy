@@ -140,6 +140,7 @@ DY_PUBLIC(dy_t) dy_copy(dy_t val) DY_NOEXCEPT
         DY_COPY_HELPER(i);
         DY_COPY_HELPER(f);
         DY_COPY_HELPER(str);
+        DY_COPY_HELPER(bytes);
         DY_COPY_HELPER(barr);
         DY_COPY_HELPER(iarr);
         DY_COPY_HELPER(farr);
@@ -236,6 +237,10 @@ DY_PUBLIC(char const*) dy_get_str_data(dy_t val) DY_NOEXCEPT
 // ---------------------------------- barr ---------------------------------- //
 
 DY_MAKE_LEN(barr) DY_GET_LEN(barr) DY_GET_IDX(barr);
+
+// ---------------------------------- bytes --------------------------------- //
+
+DY_MAKE_LEN(bytes) DY_GET_LEN(bytes) DY_GET_DATA(bytes) DY_GET_IDX(bytes);
 
 // ---------------------------------- iarr ---------------------------------- //
 

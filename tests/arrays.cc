@@ -9,7 +9,7 @@ using namespace std;
 
 TEST(ArrayTest, BooleanArray)
 {
-    dy_t arr = get_sample_generic_barr();
+    dy_t arr = get_sample_barr();
     ASSERT_EQ(dy_get_type(arr), dy_type_barr);
 
     vector<int64_t> cmp { true, false, true, true, false };
@@ -20,9 +20,24 @@ TEST(ArrayTest, BooleanArray)
     dy_dispose(arr);
 }
 
+TEST(ArrayTest, Bytes)
+{
+    dy_t arr = get_sample_bytes();
+    ASSERT_EQ(dy_get_type(arr), dy_type_bytes);
+
+    vector<uint8_t> cmp { 2, 3, 4, 1 };
+
+    uint8_t const*  data = dy_get_bytes_data(arr);
+    vector<uint8_t> vec(data, data + dy_get_bytes_len(arr));
+
+    ASSERT_EQ(vec, cmp);
+
+    dy_dispose(arr);
+}
+
 TEST(ArrayTest, IntegerArray)
 {
-    dy_t arr = get_sample_generic_iarr();
+    dy_t arr = get_sample_iarr();
     ASSERT_EQ(dy_get_type(arr), dy_type_iarr);
 
     vector<int64_t> cmp { 2, 3, 4, 1 };
@@ -37,7 +52,7 @@ TEST(ArrayTest, IntegerArray)
 
 TEST(ArrayTest, FloatArray)
 {
-    dy_t arr = get_sample_generic_farr();
+    dy_t arr = get_sample_farr();
     ASSERT_EQ(dy_get_type(arr), dy_type_farr);
 
     vector<double> cmp { 2.5, 3.6, 3.8, 1.2, 4.5, 5.8 };

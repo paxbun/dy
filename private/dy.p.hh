@@ -16,6 +16,7 @@ typedef union _dy_data_t
     double                                f;
     std::string                           str;
     std::vector<bool>                     barr;
+    std::vector<uint8_t>                  bytes;
     std::vector<int64_t>                  iarr;
     std::vector<double>                   farr;
     std::vector<dy_t>                     arr;
@@ -46,6 +47,7 @@ struct _dy_val_t
         case dy_type_i:
         case dy_type_f: break;
         case dy_type_str: data.str.~basic_string(); break;
+        case dy_type_bytes: data.bytes.~vector(); break;
         case dy_type_barr: data.barr.~vector(); break;
         case dy_type_iarr: data.iarr.~vector(); break;
         case dy_type_farr: data.farr.~vector(); break;

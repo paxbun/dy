@@ -80,6 +80,11 @@ typedef enum _dy_type_t
     dy_type_barr,
 
     /// <summary>
+    /// byte array
+    /// </summary>
+    dy_type_bytes,
+
+    /// <summary>
     /// integer array
     /// </summary>
     dy_type_iarr,
@@ -258,6 +263,39 @@ DY_DEF_GET_LEN(barr);
 /// <param name="idx">the index of the entry</param>
 /// <returns>the value of the entry</returns>
 DY_DEF_GET_IDX(barr, bool);
+
+// --------------------------------- bytes  --------------------------------- //
+
+/// <summary>
+/// makes an byte array value
+/// </summary>
+/// <param name="bytes">a pointer to the byte array to copy</param>
+/// <param name="len">the length of the array</param>
+/// <returns>a new value instance</returns>
+DY_DEF_MAKE_LEN(bytes, uint8_t);
+
+/// <summary>
+/// returns the length of the byte array in the internal data
+/// </summary>
+/// <param name="val">the value instance</param>
+/// <returns>the length of the byte array</returns>
+DY_DEF_GET_LEN(bytes);
+
+/// <summary>
+/// returns the pointer to the byte array in the internal data
+/// </summary>
+/// <param name="val">the value instance</param>
+/// <returns>the pointer to the byte array</returns>
+DY_DEF_GET_DATA(bytes, uint8_t);
+
+/// <summary>
+/// returns the value of a entry at the given index of the byte array in the
+/// internal data
+/// </summary>
+/// <param name="val">the value instance</param>
+/// <param name="idx">the index of the entry</param>
+/// <returns>the value of the entry</returns>
+DY_DEF_GET_IDX(bytes, uint8_t);
 
 // ---------------------------------- iarr ---------------------------------- //
 

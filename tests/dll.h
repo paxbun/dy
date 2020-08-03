@@ -27,14 +27,16 @@
 #    endif
 #endif
 
-DLL_PUBLIC(dy_t) get_sample_generic_barr() DY_NOEXCEPT;
-
-DLL_PUBLIC(dy_t) get_sample_generic_iarr() DY_NOEXCEPT;
-
-DLL_PUBLIC(dy_t) get_sample_generic_farr() DY_NOEXCEPT;
-
 DLL_PUBLIC(dy_t) get_sample_generic_array() DY_NOEXCEPT;
 
 DLL_PUBLIC(dy_t) get_sample_generic_map() DY_NOEXCEPT;
+
+DLL_PUBLIC(dy_t) get_sample_barr() DY_NOEXCEPT;
+
+DLL_PUBLIC(dy_t) get_sample_bytes() DY_NOEXCEPT;
+
+DLL_PUBLIC(dy_t) get_sample_iarr() DY_NOEXCEPT;
+
+DLL_PUBLIC(dy_t) get_sample_farr() DY_NOEXCEPT;
 
 #endif
