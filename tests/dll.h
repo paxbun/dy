@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Chanjung Kim (paxbun). All rights reserved.
+// Copyright (c) 2020 Stella Authors. All rights reserved.
 
 #ifndef DY_TEST_DLL_H
 #define DY_TEST_DLL_H

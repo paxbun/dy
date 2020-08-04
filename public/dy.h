@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Chanjung Kim (paxbun). All rights reserved.
+// Copyright (c) 2020 Stella Authors. All rights reserved.
 
 #ifndef DY_H
 #define DY_H

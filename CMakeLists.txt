@@ -1,10 +1,10 @@
-# Copyright (c) 2020 Chanjung Kim (paxbun). All rights reserved.
+# Copyright (c) 2020 Stella Authors. All rights reserved.
 
 cmake_minimum_required(VERSION 3.17)
 project(dy
     VERSION 1.0.0
     DESCRIPTION "JSON-like type library for C"
-    HOMEPAGE_URL "https://github.com/paxbun/dy"
+    HOMEPAGE_URL "https://github.com/stelo-stella/dy"
 )
 enable_testing()
 

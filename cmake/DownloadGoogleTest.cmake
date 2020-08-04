@@ -1,4 +1,4 @@
-# Copyright (c) 2020 Chanjung Kim (paxbun). All rights reserved.
+# Copyright (c) 2020 Stella Authors. All rights reserved.
 
 cmake_minimum_required(VERSION 3.17)
 project(dy-googletest-download)
